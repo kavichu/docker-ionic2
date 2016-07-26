@@ -8,3 +8,7 @@ RUN mkdir /app/ && \
 RUN npm install -g ionic@beta 
 RUN npm install -g cordova 
 WORKDIR /app/
+
+VOLUME /app/
+
+CMD ["ionic", "serve", "--lab", "--port", "8080", "--nobrowser", "--nolivereload"]
