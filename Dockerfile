@@ -8,7 +8,7 @@ RUN mkdir /app/ && \
 RUN npm install -g ionic@beta 
 RUN npm install -g cordova 
 
-RUN useradd jenkins
+RUN useradd jenkins -d /app/
 RUN chown -R jenkins:jenkins /app/
 
 USER jenkins
