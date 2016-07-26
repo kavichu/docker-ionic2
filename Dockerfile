@@ -7,13 +7,7 @@ RUN mkdir /app/ && \
     apt-get install -y nodejs
 RUN npm install -g ionic@beta 
 RUN npm install -g cordova 
+RUN npm install -g gulp
+RUN npm install -g bower
 
-RUN useradd jenkins -d /app/
-RUN chown -R jenkins:jenkins /app/
-
-USER jenkins
-WORKDIR /app/
-
-VOLUME /app/
-
-CMD ["ionic", "serve", "--lab", "--port", "8080", "--nobrowser", "--nolivereload"]
+ENTRYPOINT ["bash"]
