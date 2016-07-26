@@ -7,6 +7,8 @@ RUN mkdir /app/ && \
     apt-get install -y nodejs
 RUN npm install -g ionic@beta 
 RUN npm install -g cordova 
+RUN chwon -R jenkins:jenkins /app/
+USER jenkins
 WORKDIR /app/
 
 VOLUME /app/
