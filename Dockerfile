@@ -1,4 +1,4 @@
-FROM lvlds/android-sdk
+FROM lvlds/docker-android-sdk
 
 RUN mkdir /app/ && \
     apt-get update && \
